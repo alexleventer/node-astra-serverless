@@ -13,6 +13,7 @@ const {
 } = process.env;
 
 const loadPelotonData = async () => {
+  console.log(`Loading data into database: ${ASTRA_DB_ID}`);
   const astraClient = await createClient({
     astraDatabaseId: ASTRA_DB_ID,
     astraDatabaseRegion: ASTRA_DB_REGION,
@@ -32,15 +33,11 @@ const loadPelotonData = async () => {
     limit: 200, // Increase if you'd like to import more workouts
   });
 
-  const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
   workouts.data.forEach(async (workout) => {
     try {
       await workoutsCollection.create(workout.id, workout);
       console.log(`${workout.name} loaded...`);
 
-      // Upgrade to a paid tier and get rid of this line :)
-      await timeout(3000);
     } catch (e) {
       console.log(e);
     }
