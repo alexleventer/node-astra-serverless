@@ -5,7 +5,8 @@
   "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy -v",
-    "test": "serverless-bundle test"
+    "test": "serverless-bundle test",
+    "format": "prettier --write ."
   },
   "author": "Alex Leventer",
   "license": "MIT",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "prettier": "^2.2.1",
     "serverless-bundle": "^4.2.0",
     "serverless-offline": "^6.8.0"
   }

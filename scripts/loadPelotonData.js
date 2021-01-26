@@ -1,6 +1,6 @@
-require('dotenv').config();
-const { peloton } = require('peloton-client-node');
-const { createClient } = require('@astrajs/collections');
+require("dotenv").config();
+const { peloton } = require("peloton-client-node");
+const { createClient } = require("@astrajs/collections");
 
 const {
   ASTRA_DB_ID,
@@ -9,7 +9,7 @@ const {
   ASTRA_DB_PASSWORD,
   ASTRA_DB_KEYSPACE,
   PELOTON_USERNAME,
-  PELOTON_PASSWORD
+  PELOTON_PASSWORD,
 } = process.env;
 
 const loadPelotonData = async () => {
@@ -20,17 +20,19 @@ const loadPelotonData = async () => {
     password: ASTRA_DB_PASSWORD,
   });
 
-  const workoutsCollection = await astraClient.namespace(ASTRA_DB_KEYSPACE).collection('workouts');
+  const workoutsCollection = await astraClient
+    .namespace(ASTRA_DB_KEYSPACE)
+    .collection("workouts");
   await peloton.authenticate({
     username: PELOTON_USERNAME,
-    password: PELOTON_PASSWORD
+    password: PELOTON_PASSWORD,
   });
 
   const workouts = await peloton.workouts({
     limit: 200, // Increase if you'd like to import more workouts
   });
 
-  const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+  const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   workouts.data.forEach(async (workout) => {
     try {
