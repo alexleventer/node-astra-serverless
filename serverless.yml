@@ -30,3 +30,16 @@ functions:
       - http:
           path: workouts
           method: post
+  update:
+    handler: update.main
+    events:
+      - http:
+          path: workouts/{id}
+          method: put
+  delete:
+    handler: delete.main
+    events:
+      - http:
+          path: workouts/{id}
+          method: delete
+
