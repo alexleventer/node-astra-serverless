@@ -1,0 +1,21 @@
+{
+  "name": "node-astra-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy -v",
+    "test": "serverless-bundle test"
+  },
+  "author": "Alex Leventer",
+  "license": "MIT",
+  "dependencies": {
+    "@astrajs/collections": "0.0.9",
+    "peloton-client-node": "^0.4.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "serverless-bundle": "^4.2.0",
+    "serverless-offline": "^6.8.0"
+  }
+}
