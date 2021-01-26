@@ -1,4 +1,4 @@
-# 🚲 Node Astra Serverless
+# 🚲 Serverless Peloton API
 A Serverless Node API to interact with your Peloton data built with:
 1. DataStax Astra Serverless Cassandra Database
 2. DataStax Astra Document API
