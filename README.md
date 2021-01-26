@@ -12,3 +12,5 @@ A Serverless Node API to interact with your Peloton data built with:
 
 1. install the serverless cli: `npm install -g serverless`
 2. install node modules: `npm install`
+3. Rename .env.sample -> .env, fill out all the environments
+4. Load Peloton data into your Astra Serverless database by running `node scripts/loadPelotonData.js`
