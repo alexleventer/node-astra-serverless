@@ -1,9 +1,10 @@
 # 🚲 Node Astra Serverless
 A Serverless Node API to interact with your Peloton data built with:
 1. DataStax Astra Serverless Cassandra Database
-2. AWS Lambdas
-3. Peloton API
-4. Typescript
+2. DataStax Astra Document API
+3. AWS Lambdas
+4. Peloton API
+5. Typescript
 
 ## Getting Started:
 1. install the serverless cli: `npm install -g serverless`
