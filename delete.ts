@@ -6,10 +6,10 @@ export const main = async (event) => {
 
     return {
       statusCode: 200,
-      body: {
+      body: JSON.stringify({
         ok: true,
-        results: await workoutsCollection.delete(event.body.id),
-      },
+        results: await workoutsCollection.delete(JSON.parse(event).body.id),
+      }),
     };
   } catch (error) {
     return {

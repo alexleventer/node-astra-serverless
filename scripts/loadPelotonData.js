@@ -37,7 +37,6 @@ const loadPelotonData = async () => {
     try {
       await workoutsCollection.create(workout.id, workout);
       console.log(`${workout.name} loaded...`);
-
     } catch (e) {
       console.log(e);
     }

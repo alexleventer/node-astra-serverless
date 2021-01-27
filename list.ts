@@ -3,13 +3,14 @@ import { getCollection } from "./lib/astra";
 export const main = async () => {
   try {
     const workoutsCollection = await getCollection("workouts");
+    const results = await workoutsCollection.find();
 
     return {
       statusCode: 200,
-      body: {
+      body: JSON.stringify({
         ok: true,
-        results: await workoutsCollection.find(),
-      },
+        results,
+      }),
     };
   } catch (error) {
     return {
