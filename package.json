@@ -1,7 +1,7 @@
 {
   "name": "node-astra-serverless",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Serverless Node API to interact with your Peloton data using Serverless Astra and AWS Lambdas",
   "scripts": {
     "deploy": "serverless deploy -v",
     "test": "serverless-bundle test",
