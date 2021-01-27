@@ -14,4 +14,5 @@ A Serverless Node API to interact with your Peloton data built with:
 2. Install node modules: `npm install`
 3. Rename `.env.sample` -> `.env`, fill out all the environments
 4. Load Peloton data into your Astra Serverless database by running `node scripts/loadPelotonData.js`
-5. Deploy your app by running `serverless deploy`
+5. Configure the AWS CLI
+6. Deploy your app by running `serverless deploy`
